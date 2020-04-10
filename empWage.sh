@@ -3,7 +3,9 @@
 echo "Welcome to employeewage computation"
 wagePerHour=20
 declare wage
+declare totalwage
 workingdays=20
+workinghours=100
 isPresent=$((RANDOM%2))
 case $isPresent in
     1 ) echo "Employee is present" 
@@ -15,6 +17,13 @@ case $isPresent in
     echo workingdays=0
     ;;
 esac
+
+if [[ $workingdays -ge 20 ]]; then
+    echo totalwage=$((wagePerHour * workingdays))
+fi
+if [[ $workinghours -ge 100 ]]; then
+    echo totalwage=$((wagePerHour * workinghours))
+fi
 
 
 
