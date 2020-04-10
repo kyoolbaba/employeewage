@@ -4,20 +4,15 @@ echo "Welcome to employeewage computation"
 wagePerHour=20
 declare wage
 isPresent=$((RANDOM%2))
-if [[ $isPresent -eq 1 ]]; then
-    echo "Employee is Present"
-else
-    echo "Employee is Absent"
-fi
-if [[ $isPresent -eq 1 ]]; then
-    echo  wage=$((wagePerHour*8))
-else
-    echo wage=0
-fi
+case $isPresent in
+    1 ) echo "Employee is present" 
+        echo wage=$((wagePerHour * 8)) 
+     ;;
+    0 ) echo "Employee is absent"
+    echo wage=0  
+    ;;
+esac
 
-if [[ $isPresent -eq 1 ]]; then
-    echo wage=$((wagePerHour*4))
-else
-    echo wage=0
-fi
+
+
 
