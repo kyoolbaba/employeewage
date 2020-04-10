@@ -15,3 +15,9 @@ else
     echo wage=0
 fi
 
+if [[ $isPresent -eq 1 ]]; then
+    echo wage=$((wagePerHour*4))
+else
+    echo wage=0
+fi
+
