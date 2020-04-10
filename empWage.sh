@@ -25,6 +25,11 @@ if [[ $workinghours -ge 100 ]]; then
     echo totalwage=$((wagePerHour * workinghours))
 fi
 
+getWorkinghours ()
+{
+    echo Printing working hours  that is $workinghours hours
+}
+getWorkinghours
 
 
 
